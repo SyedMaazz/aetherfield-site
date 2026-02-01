@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
-import Hero from './components/Hero'; //
+import Hero from './components/Hero';
+import Features from './components/Features';
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        {/* We'll add the Features Grid next */}
+        <Features />
       </main>
     </div>
   );
