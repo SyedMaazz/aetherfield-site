@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logoImg from "../assets/logo.svg";
+// 1. Import Hugeicons
+import { HugeiconsIcon } from "@hugeicons/react";
+import { ArrowRight02Icon } from "@hugeicons/core-free-icons";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +12,6 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Increased threshold to 50 to prevent flickering at the very top
       setScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
@@ -27,19 +29,19 @@ const Navbar = () => {
     <nav
       className={`fixed w-full z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-transparent backdrop-blur-md py-4 shadow-sm" // Border removed here
+          ? "bg-transparent backdrop-blur-md py-4 shadow-sm"
           : "bg-transparent py-4"
       }`}
     >
       <div className="w-full px-2">
-        <div className="flex justify-between items-start">
+        <div className="flex justify-between items-center">
           {/* Logo Section */}
           <div className="mt-1 ml-3">
             <a href="/">
               <img
                 src={logoImg}
                 alt="Aetherfield"
-                className="h-5 w-30 object-contain block" // Changed w-30 to w-auto to prevent stretching
+                className="h-5 w-30 object-contain block" 
               />
             </a>
           </div>
@@ -59,9 +61,17 @@ const Navbar = () => {
             </div>
             <a
               href="#"
-              className="font-nav text-[16px] font-medium text-black flex items-center gap-0.5 ml-2"
+              className="font-nav text-[16px] font-medium text-black flex items-center gap-0.5 "
             >
-              Get started →
+              Get started
+              {/* 2. Use the Hugeicon component here */}
+              <HugeiconsIcon 
+                icon={ArrowRight02Icon} 
+                size={18} 
+                color="currentColor" 
+                strokeWidth={2}
+                className="mt-0.5"
+              />
             </a>
           </div>
 
@@ -91,8 +101,9 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <a href="#" className="text-sm font-medium text-slate-900">
-              Get started →
+           <a href="#" className="font-nav text-sm font-medium text-slate-900 flex items-center gap-1">
+              Get started
+              <HugeiconsIcon icon={ArrowRight02Icon} size={16} />
             </a>
           </motion.div>
         )}

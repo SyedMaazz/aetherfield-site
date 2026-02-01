@@ -1,9 +1,55 @@
 @import "tailwindcss";
 
+/* 1. REGISTER LOCAL FONTS */
+/* Regular - Weight 400 */
+@font-face {
+  font-family: 'Source Serif Pro';
+  src: url('./assets/fonts/SourceSerifPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Semibold - Weight 600 */
+@font-face {
+  font-family: 'Source Serif Pro';
+  src: url('./assets/fonts/SourceSerifPro-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold - Weight 700 */
+@font-face {
+  font-family: 'Source Serif Pro';
+  src: url('./assets/fonts/SourceSerifPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2. TAILWIND V4 THEME CONFIGURATION */
 @theme {
-  /* This defines the 'font-nav' utility class in Tailwind v4 */
-  --font-nav: "Radio Canada Big", sans-serif;
+  /* This maps 'font-serif' to your local files */
+  --font-serif: "Source Serif Pro", serif;
   
-  /* This defines the 'font-serif' utility class for your headings */
-  --font-serif: "Source Serif 4", Georgia, serif;
+  /* This maps 'font-nav' to the Google Font you liked */
+  --font-nav: "Radio Canada Big", sans-serif;
+
+  /* Custom colors if you need them */
+  --color-brand-blue: #aad4fd;
+  --color-brand-cream: #f6f1e2;
+}
+
+/* 3. GLOBAL RESET */
+:root {
+  font-family: var(--font-nav); /* Default font for the site */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
 }
