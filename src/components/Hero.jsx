@@ -64,6 +64,7 @@ const Hero = () => {
             />
           </div>
         </motion.div>
+        {/* The Black Separator Line */}
       </div>
     </section>
   );
