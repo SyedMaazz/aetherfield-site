@@ -53,31 +53,36 @@ const Features = () => {
           </div>
 
           {/* RIGHT COLUMN: The List */}
-          <div className="w-full">
-            <div className="mb-12">
+          <div className="w-[750px] -ml-30">
+            <div className="mb-5">
               {steps.map((step, index) => (
-                <div key={index} className="border-t border-black py-5">
-                  <div className="grid grid-cols-[auto_1fr_auto] items-baseline gap-4">
-                    <h3 className="text-xl font-nav font-medium text-black whitespace-nowrap">
+                <div key={index} className="border-t-[0.01px] border-black/10 py-5.5">
+                  {/* Container for Heading and ID */}
+                  <div className="flex justify-between items-start">
+                    <h3 className="text-[20px] font-nav font-medium text-black">
                       {step.title}
                     </h3>
-                    <p className="text-slate-500 font-serif text-sm truncate">
-                      {step.desc}
-                    </p>
-                    <span className="text-xs font-nav font-medium text-black tabular-nums">
+                    <span
+                      className="text-[15.5px] font-medium text-[#636262] tabular-nums"
+                      style={{ fontFamily: '"Geist Mono", monospace' }}
+                    >
                       {step.id}
                     </span>
                   </div>
+
+                  <p className="text-black font-serif text-[20px] mt-1 max-w-md whitespace-nowrap">
+                    {step.desc}
+                  </p>
                 </div>
               ))}
-              <div className="border-t border-black w-full"></div>
+              <div className="border-[0.01px] border-black/10 w-full"></div>
             </div>
 
-            {/* Button */}
-            <button className="px-7 py-4 bg-black text-white text-1xl font-normal flex items-center gap-3 cursor-pointer">
-              <span className="w-1 h-1 bg-white rounded-full"></span>
-              Explore features
-            </button>
+           {/* Match Hero Section Buttons: px-6, py-3, text-sm, rounded-sm */}
+<button className="px-6 py-3 bg-black text-white text-sm font-medium rounded-sm flex items-center gap-2 cursor-pointer">
+  <span className="w-1 h-1 bg-white rounded-full"></span>
+  Explore features
+</button>
           </div>
         </div>
       </div>
