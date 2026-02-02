@@ -26,7 +26,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="relative -mt-70 pt-42 pb-24 bg-white z-0">
+    <section className="relative -mt-70 pt-42 pb-29 bg-white z-0">
       <div className="w-full h-[1px] bg-black mb-80 mt-28"></div>
 
       <div className="max-w-7xl mx-auto px-6">
@@ -56,7 +56,10 @@ const Features = () => {
           <div className="w-[750px] -ml-30">
             <div className="mb-5">
               {steps.map((step, index) => (
-                <div key={index} className="border-t-[0.01px] border-black/10 py-5.5">
+                <div
+                  key={index}
+                  className="border-t-[0.01px] border-black/10 py-5.5"
+                >
                   {/* Container for Heading and ID */}
                   <div className="flex justify-between items-start">
                     <h3 className="text-[20px] font-nav font-medium text-black">
@@ -78,11 +81,11 @@ const Features = () => {
               <div className="border-[0.01px] border-black/10 w-full"></div>
             </div>
 
-           {/* Match Hero Section Buttons: px-6, py-3, text-sm, rounded-sm */}
-<button className="px-6 py-3 bg-black text-white text-sm font-medium rounded-sm flex items-center gap-2 cursor-pointer">
-  <span className="w-1 h-1 bg-white rounded-full"></span>
-  Explore features
-</button>
+            {/* Match Hero Section Buttons: px-6, py-3, text-sm, rounded-sm */}
+            <button className="px-6 py-3 bg-black text-white text-sm font-medium rounded-sm flex items-center gap-2 cursor-pointer">
+              <span className="w-1 h-1 bg-white rounded-full"></span>
+              Explore features
+            </button>
           </div>
         </div>
       </div>
