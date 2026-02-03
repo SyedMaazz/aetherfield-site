@@ -27,28 +27,28 @@ const Principles = () => {
   ];
 
   return (
-    <section className="relative pt-29 overflow-hidden bg-white">
-      {/* Background Image Layer */}
+    <section className="relative pt-32 pb-26 overflow-hidden bg-white">
       <div className="absolute inset-0 z-0">
         <img
           src={principlesBg}
           alt="Section Background"
-          className="w-full h-[693px] object-cover"
+          className="w-full h-full object-cover"
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-20">
+      <div className="max-w-8xl mx-auto px-6 relative z-10">
+        <div className="text-center mb-12">
           <h2 className="md:text-[77px] leading-[1.1] text-black tracking-tight">
-            <span className="font-serif font-[500] block">Built for clarity</span>
-
+            <span className="font-serif font-[500] block">
+              Built for clarity
+            </span>
             <span className="font-nav font-light tracking-[-0.2rem] -mt-1 block">
               Designed for action
             </span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {cards.map((card, index) => (
             <motion.div
               key={index}
@@ -56,21 +56,26 @@ const Principles = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white/90 backdrop-blur-sm rounded-[32px] p-10 flex flex-col items-start min-h-[400px] border border-black/5"
+              /* 2. GLASS EFFECT: 
+                 - bg-white/70: Makes it 30% transparent
+                 - backdrop-blur-md: Blurs the image underneath the card
+                 - rounded-[40px]: Gives it the soft, rounded shape
+              */
+              className="bg-white backdrop-blur-md p-10 flex flex-col items-start h-[250px] rounded-[19px] border border-black/5 shadow-sm"
             >
-              {/* 2. CARD IMAGE: Placed at the top left */}
-              <div className="mb-8">
+              <div className="mb-5">
                 <img
                   src={card.image}
                   alt={card.title}
-                  className="w-16 h-16 object-contain"
+                  className="w-10.5 h-10.5 object-contain"
                 />
               </div>
 
-              <h3 className="text-[22px] font-nav font-medium text-black mb-4 leading-tight">
+              <h3 className="text-[20px] font-nav font-medium text-black mb-5 leading-tight tracking-tight">
                 {card.title}
               </h3>
-              <p className="text-slate-600 font-nav leading-relaxed text-[16px]">
+
+              <p className="text-black font-serif text-[18px] -mt-4 leading-[1.4]">
                 {card.desc}
               </p>
             </motion.div>
