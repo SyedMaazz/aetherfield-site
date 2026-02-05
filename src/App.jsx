@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import Features from './components/Features';
 import Principles from './components/Principles';
 import Foundations from './components/Foundations';
+import Journal from './components/Journal';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Features />
         <Principles />
         <Foundations />
+        <Journal />
       </main>
     </div>
   );
