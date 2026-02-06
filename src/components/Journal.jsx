@@ -44,7 +44,7 @@ const Journal = () => {
 
         {/* 2. HEADER */}
         <div className="flex justify-start mb-4">
-          <h2 className="text-[52px] font-serif font-medium text-black">
+          <h2 className="text-[52px] font-nav font-medium text-black">
             From the journal
           </h2>
         </div>
