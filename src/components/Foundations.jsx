@@ -4,7 +4,7 @@ import foundationsImg from "../assets/foundations-bg.avif";
 
 const Foundations = () => {
   return (
-    <section className="bg-white py-30 overflow-hidden flex justify-center items-center">
+    <section className="bg-white py-28 overflow-hidden flex justify-center items-center">
       {/* 1. THE MAIN CARD: Added 'relative' and 'left-[]' to control horizontal movement */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
