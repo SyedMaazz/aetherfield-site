@@ -33,8 +33,8 @@ const Journal = () => {
     <section className="bg-white ml-1 px-6 relative">
       <div className="max-w-[615px] mx-auto relative">
         
-        {/* 1. THE TILTED BADGE: Adjusted -left and -top to bring it down/left */}
-        <div className="absolute -left-70 top-3 select-none pointer-events-none hidden lg:block">
+        {/* 1. THE TILTED BADGE */}
+        <div className="absolute -left-70 top-3 select-none pointer-events-none hidden lg:block z-10">
           <img 
             src={journalLogo} 
             alt="Journal Logo" 
@@ -56,9 +56,10 @@ const Journal = () => {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              /* CHANGED: x: 8 moves the row to the RIGHT on hover */
+              whileHover={{ x: 8 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              /* CHANGED items-center TO items-start */
+              transition={{ delay: index * 0.1, duration: 0.3 }}
               className="group flex flex-row items-start gap-4 py-6 border-b border-zinc-200 cursor-pointer"
             >
               {/* Image Container */}
@@ -72,12 +73,10 @@ const Journal = () => {
 
               {/* Text Content */}
               <div className="flex flex-col flex-1">
-                {/* Heading (Title) */}
                 <h3 className="text-[20px] font-nav font-medium text-black leading-5.5 -mt-0.5 group-hover:text-zinc-600 transition-colors mb-0.5 tracking-normal">
                   {article.title}
                 </h3>
                 
-                {/* Category and Time */}
                 <div className="flex items-center gap-2 text-zinc-500 font-nav text-[14px] uppercase tracking-wider">
                   <span>{article.category}</span>
                   <span>•</span>
