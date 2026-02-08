@@ -31,24 +31,27 @@ const Testimonial = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="w-full md:w-1/2 flex flex-col items-start px-10"
+          className="w-full md:w-1/2 flex flex-col items-start px-10 mt-4"
         >
           {/* Double Inverted Comma */}
-          <span className="text-[70px] font-serif leading-none text-zinc-200 -mb-8 -ml-2 select-none">
+          <span className="text-[65px] font-serif leading-none text-[#dbe0ec] ml-18 select-none">
             “
           </span>
 
           {/* Heading */}
-          <h2 className="text-[32px] md:text-[40px] font-nav font-medium text-black leading-tight mb-8 tracking-tight">
-            We finally moved past spreadsheets and guesswork. Now we have real data to guide real decisions.
+          <h2 className="text-[32px] md:text-[40px] font-nav font-medium text-black leading-[1.0] mt-2 mb-8 ml-18 tracking-tight w-[600px]">
+            We finally moved past <br />
+            spreadsheets and guesswork. <br />
+            Now we have real data to guide <br />
+            real decisions.
           </h2>
 
           {/* Subtext Area */}
           <div className="flex flex-col gap-1">
-            <p className="text-black font-nav font-bold text-[18px]">
+            <p className="text-black font-nav font-medium text-[19px] ml-18 mt-5">
               Elliot Williams
             </p>
-            <p className="text-zinc-600 font-serif text-[16px]">
+            <p className="text-zinc-600 font-serif text-[21px] ml-18 -mt-1 tracking-tighter">
               Head of Sustainability, Flux Materials
             </p>
           </div>
