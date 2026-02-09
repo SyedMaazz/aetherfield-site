@@ -5,6 +5,7 @@ import Principles from './components/Principles';
 import Foundations from './components/Foundations';
 import Journal from './components/Journal';
 import Testimonial from './components/Testimonial';
+import CallToAction from './components/Calltoaction';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Foundations />
         <Journal />
         <Testimonial />
+        <CallToAction />
       </main>
     </div>
   );
