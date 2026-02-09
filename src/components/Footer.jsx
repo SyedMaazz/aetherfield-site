@@ -7,9 +7,9 @@ const Footer = () => {
     /* Div A: Main Footer Container */
     <footer className="w-full px-2 md:px-5 py-7 flex flex-col bg-[#fff546]">
       {/* Div B: Top Section */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-24">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-1.5 -translate-y-[10px]">
         {/* Div E: Navigation Links (Left Side) */}
-        <div className="flex flex-wrap gap-8 md:gap-12 text-[20px] font-nav font-medium text-[#66640f]">
+        <div className="flex flex-wrap gap-8 md:gap-5 text-[20px] font-nav font-medium text-[#66640f]">
           <a href="#" className="hover:text-[#726f11] transition-colors">
             Product
           </a>
@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
 
         {/* Div F: Copyright (Right Side) */}
-        <div className="text-[14px] font-serif text-[#66640f] mt-6 md:mt-0">
+        <div className="text-[20px] font-serif text-[#66640f] mt-6 md:mt-0 tracking-tight">
           © 2025 · All rights reserved
         </div>
       </div>
